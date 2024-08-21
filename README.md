@@ -40,6 +40,11 @@ Handling of errors is expected as well.
 1. Clone repo to local dir.
 2. `mvn clean install -DskipTests`
 3. `mvn spring-boot:run`
-4. REST endpoint served at http://localhost:8080/bookstore
-5. h2-console served at http://localhost:8080/h2-console
-6. Swagger UI served at http://localhost:8080/swagger-ui/index.html
+4. Login at http://localhost:8080/login
+    - `admin`/`password` as admin user
+    - `user`/`password` as non-privileged user (no access to `/h2-console` and `DELETE` requests)
+    - Open up chrome dev tools to get the `JSESSIONID` cookie to use with other apps e.g. postman
+    - Delete the cookie to logout.
+5. REST endpoint served at http://localhost:8080/bookstore
+6. h2-console served at http://localhost:8080/h2-console
+7. Swagger UI served at http://localhost:8080/swagger-ui/index.html
