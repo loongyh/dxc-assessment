@@ -8,6 +8,7 @@ import java.util.Set;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import io.micrometer.common.util.StringUtils;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.AssertTrue;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,16 +19,21 @@ import lombok.ToString;
 @ToString
 public class BookUpdateRequest {
 
+    @Schema(example = "978-0553499117")
     private String isbn;
 
+    @Schema(example = "Real")
     private String title;
 
     private Set<AuthorCreationRequest> authors;
 
+    @Schema(example = "2013")
     private int year;
 
+    @Schema(example = "28.97")
     private BigDecimal price;
 
+    @Schema(example = "Romance")
     private String genre;
 
     @JsonIgnore

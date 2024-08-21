@@ -62,7 +62,7 @@ public class BookstoreController {
         return ResponseEntity.ok(bookstoreService.getBook(id));
     }
 
-    @Operation(summary = "Get books by title and/or author")
+    @Operation(summary = "Get books by title and/or author name")
     @GetMapping("/book")
     public ResponseEntity<Page<Book>> getTasks(@RequestParam(value = "page", defaultValue = "0") Integer page,
                                                @RequestParam(value = "size", defaultValue = "10") Integer size,
