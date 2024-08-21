@@ -1,0 +1,11 @@
+INSERT INTO authors (id, name, birthday) VALUES (0, 'Jeffrey Archer', '1940-04-15')
+INSERT INTO books (id, isbn, title, year, price, genre, time_created, time_updated) VALUES (0, '1-86092-049-7', 'The Grass is Always Greener', 2000, 18.39, 'Modern Times', 1723906457, 1723906457)
+INSERT INTO books_authors (authors_id, book_id) VALUES (0, 0)
+
+INSERT INTO authors (id, name, birthday) VALUES (1, 'John Green', '1977-08-24')
+INSERT INTO authors (id, name, birthday) VALUES (2, 'Maureen Johnson', '1973-02-16')
+INSERT INTO authors (id, name, birthday) VALUES (3, 'Lauren Myracle', '1969-05-15')
+INSERT INTO books (id, isbn, title, year, price, genre, time_created, time_updated) VALUES (1, '978-0-14-241214-5', 'Let It Snow', 2008, 15.21, 'Young adult fiction', 1723906457, 1723906457)
+INSERT INTO books_authors (authors_id, book_id) VALUES (1, 1)
+INSERT INTO books_authors (authors_id, book_id) VALUES (2, 1)
+INSERT INTO books_authors (authors_id, book_id) VALUES (3, 1)

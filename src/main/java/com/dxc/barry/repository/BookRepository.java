@@ -11,9 +11,9 @@ import com.dxc.barry.model.Book;
 @Repository
 public interface BookRepository extends JpaRepository<Book, Long> {
 
-    Page<Book> findAllByAuthorsName(String name, Pageable page);
-    Page<Book> findAllByTitle(String title, Pageable page);
-    Page<Book> findAllByTitleAndAuthorsName(String title, String name, Pageable page);
+    Page<Book> findByAuthorsName(String name, Pageable page);
+    Page<Book> findByTitle(String title, Pageable page);
+    Page<Book> findByTitleAndAuthorsName(String title, String name, Pageable page);
     Book findByTitleAndAuthors(String title, Author author);
 
 }

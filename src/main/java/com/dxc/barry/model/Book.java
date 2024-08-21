@@ -28,7 +28,7 @@ import org.apache.commons.lang3.StringUtils;
 public class Book {
 
     @Id
-    @SequenceGenerator(name = "books_seq", allocationSize = 1)
+    @SequenceGenerator(name = "books_seq", allocationSize = 1, initialValue = 2)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "books_seq")
     private long id;
 

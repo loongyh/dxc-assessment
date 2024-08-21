@@ -26,7 +26,7 @@ import org.apache.commons.lang3.StringUtils;
 public class Author {
 
     @Id
-    @SequenceGenerator(name = "authors_seq", allocationSize = 1)
+    @SequenceGenerator(name = "authors_seq", allocationSize = 1, initialValue = 4)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "authors_seq")
     @JsonIgnore
     private long id;

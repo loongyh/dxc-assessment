@@ -80,12 +80,11 @@ public class BookstoreService implements IBookstoreService {
         Page<Book> books;
 
         if (bookSR.author() == null) {
-            books = bookRepository.findAllByTitle(bookSR.title(), page);
+            books = bookRepository.findByTitle(bookSR.title(), page);
         } else {
-            
             books = bookSR.title() == null ?
-                books = bookRepository.findAllByAuthorsName(bookSR.author(), page) :
-                bookRepository.findAllByTitleAndAuthorsName(bookSR.title(), bookSR.author(), page);
+                books = bookRepository.findByAuthorsName(bookSR.author(), page) :
+                bookRepository.findByTitleAndAuthorsName(bookSR.title(), bookSR.author(), page);
         }
 
         return books;
