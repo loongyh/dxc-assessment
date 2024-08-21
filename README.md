@@ -35,3 +35,11 @@ Handling of errors is expected as well.
 - Design your API as a protected resource
 - The delete book API should be restricted to only authorized role/user
 - Implementation of your API should be done in Java
+
+## Steps to run
+1. Clone repo to local dir.
+2. `mvn clean install -DskipTests`
+3. `mvn spring-boot:run`
+4. REST endpoint served at http://localhost:8080/bookstore
+5. h2-console served at http://localhost:8080/h2-console
+6. Swagger UI served at http://localhost:8080/swagger-ui/index.html
