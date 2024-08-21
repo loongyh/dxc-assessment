@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: barry
+  datasource:
+    url: jdbc:h2:mem:application;NON_KEYWORDS=YEAR
+    driverClassName: org.h2.Driver
+  jpa:
+    defer-datasource-initialization: true
+  h2:
+    console.enabled: true
+
+springdoc:
+  paths-to-match: /**
+  packages-to-scan: com.dxc.barry
+  api-docs:
+    path: /swagger
+
+swagger:
+  app-description: Documentation for bookstore API
+  app-version: 1.0.0
+  app-name: barry
